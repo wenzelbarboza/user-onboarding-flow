@@ -1,0 +1,25 @@
+
+
+.subcardTwo__url{
+    display: flex;
+    height: 30px;
+    margin-bottom: 10px;
+    border:1px solid var(--border-grey) ;
+    border-radius: 5px;
+}
+
+.subcardTwo__url > input{
+    border: none;
+    padding-left: 5px;
+    flex:0.65;
+}
+
+.subcardTwo__url > span{
+    flex:0.35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ececec;
+    height: 100%;
+    color: rgb(177, 177, 177);
+}

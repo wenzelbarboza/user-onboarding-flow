@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Subcard from './components/Subcard';
+import SubcardFour from './components/SubcardFour';
+import SubcardThree from './components/SubcardThree';
+import SubcardTwo from './components/SubcardTwo';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <div className="card">
+          <h4> Eden</h4>
+          <Routes>
+            <Route path='/' element={<Subcard />} />
+            <Route path='/secondPage' element={<SubcardTwo />} />
+            <Route path='/ThirdPage' element={<SubcardThree />} />
+            <Route path='/FourthPage' element={<SubcardFour />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

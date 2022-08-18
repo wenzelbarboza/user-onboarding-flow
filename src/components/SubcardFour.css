@@ -1,0 +1,12 @@
+.SubcardFour__tick{
+    background-color:var(--circle-filled);
+    color: white;
+    padding: 13px;
+    font-size: 25px;
+    border-radius: 50%;
+    margin-bottom: 30px ;
+}
+
+.SubcardFour > button{
+    width: 400px;
+}

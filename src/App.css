@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+.app{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card{
+    width: 80vw;
+    height: 90vh;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.card > h4{
+    margin-bottom:40px ;
+    font-size: 25px;
+    font-weight: 900 ;
+}
+
+.Subcard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Subcard > h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.Subcard > h5{
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+form > input[type='text']{
+    margin-bottom: 10px;
+    height: 15px;
+    padding: 10px;
+    border:1px solid var(--border-grey) ;
+    border-radius: 5px;
+}
+form > input[type='text']::placeholder{
+    color: rgb(173, 173, 173);
+}
+
+input[type='text']::placeholder{
+    color: rgb(173, 173, 173);
+}
+.btn{
+    height: 35px;
+    border: none;
+    background-color: var(--circle-filled);
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* progress */
+  
+  .progress__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 50px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .progress__container > .circle,.progress__container > .circle__finished {
+    height: var(--circle-size);
+    text-align: center;
+    color: white;
+    width: var(--circle-size);
+    background-color: var(--circle-blank);
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 50%;
+    position: relative;
+    margin-right:46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .progress__container > .circle::after {
+    content: "";
+    height: 3px;
+    background-color: var(--circle-blank);
+    z-index: 1;
+    position: absolute;
+    border-top: .5px solid rgb(230, 230, 230);
+    border-bottom: .5px solid rgb(230, 230, 230);
+    width: 50px;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.25s ease-out;
   }
-}
+  .progress__container > .circle__before::before {
+    content: "";
+    z-index: 100;
+    height: 3px;
+    background-color: var(--circle-filled);
+    position: absolute;
+    z-index: 100;
+    width: 25px;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.25s ease-out;
+  }
+
+
+  .progress__container > .circle__after__finish::after {
+    content: "";
+    height: 3px;
+    background-color: var(--circle-filled);
+    position: absolute;
+    width: 50px;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.25s ease-out;
+  }
+
+  
+  
+  .progress__container > .circle__finished {
+    height: var(--circle-size);
+    width: var(--circle-size);
+    background-color: var(--circle-filled);
+    border-radius: 50%;
+    position: relative;
+    margin-right:46px;
+  }
+
+  .progress__container > .just__circle {
+    width:var(--circle-size) ;
+    color: white;
+    text-align: center;
+    height: var(--circle-size);
+    background-color: var(--circle-blank);
+    border: 1px solid rgb(230, 230, 230);
+    
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .progress__container > .just__circle__blue {
+    width:var(--circle-size) ;
+    color: white;
+    text-align: center;
+    height: var(--circle-size);
+    background-color: var(--circle-filled);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+ 
