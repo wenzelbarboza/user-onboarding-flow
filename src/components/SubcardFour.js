@@ -15,7 +15,7 @@ const SubcardFour = () => {
                 <TiTick className='SubcardFour__tick' />
                 <h2>Congratulations, Eren!</h2>
                 <h5>You have completed onboarding, you can start using the Eden!</h5>
-                <button className='btn'>create workspace</button>
+                <button className='btn'>Launch Eden</button>
             </div>
         </>
     )
